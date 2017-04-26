@@ -61,6 +61,7 @@ class Topic(models.Model):
     category = models.ForeignKey(Category, verbose_name=_("category"))
 
     title = models.CharField(_("title"), max_length=255)
+    description = models.TextField(_("description"), default=_("No descriptions"), blank=True)
     slug = AutoSlugField(populate_from="title", blank=True, unique=True)
     date = models.DateTimeField(_("date"), default=timezone.now, blank=True, editable=False)
     last_active = models.DateTimeField(_("last active"), default=timezone.now, blank=True, editable=False)
