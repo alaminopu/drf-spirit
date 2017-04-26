@@ -23,4 +23,4 @@ class TopicFilter(FilterSet):
 
     class Meta:
         model = Topic
-        fields = ['is_removed', 'is_archived']
+        fields = ['is_removed', 'is_archived', 'is_pinned', 'is_globally_pinned']
