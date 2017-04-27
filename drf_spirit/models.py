@@ -66,7 +66,7 @@ class Topic(models.Model):
     date = models.DateTimeField(_("date"), default=timezone.now, blank=True, editable=False)
     last_active = models.DateTimeField(_("last active"), default=timezone.now, blank=True, editable=False)
 
-    is_pinned = models.BooleanField(_("pinned"), default=False, editable=False)
+    is_pinned = models.BooleanField(_("pinned"), default=False)
     is_globally_pinned = models.BooleanField(_("globally pinned"), default=False, editable=False)
     is_closed = models.BooleanField(_("closed"), default=False)
     is_removed = models.BooleanField(default=False)
