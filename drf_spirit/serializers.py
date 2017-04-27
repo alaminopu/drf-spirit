@@ -29,6 +29,8 @@ class TopicSerializer(ModelSerializer):
     class Meta:
         model = Topic
         fields = '__all__'
+        # TODO:: refactor after deciding about globally pinned.
+        read_only_fields = ('is_pinned',)
 
 
 class CommentSerializer(ModelSerializer):
